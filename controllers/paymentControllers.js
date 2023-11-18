@@ -17,7 +17,7 @@ export const processPayment = async (req, res) => {
       cancel_url: failUrl
     });
     console.log(paymentIntent);
-    res.json({ success: true, sessionId: paymentIntent.url });
+    res.json({ success: true, url: paymentIntent.url });
 
   } catch (error) {
     console.error('Error al procesar el pago:', error);
