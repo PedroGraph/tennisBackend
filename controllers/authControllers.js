@@ -10,7 +10,7 @@ const register = async (req, res) => {
     await user.save();
     res.json({ message: 'Usuario registrado con éxito' });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(200).json({ error: "El correo ya se encuentra registrado" });
   }
 };
 
