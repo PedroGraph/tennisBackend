@@ -16,6 +16,7 @@ export const processPayment = async (req, res) => {
       success_url: successUrl,
       cancel_url: failUrl
     });
+    console.log(paymentIntent);
     res.json({ success: true, sessionId: paymentIntent.url });
 
   } catch (error) {
